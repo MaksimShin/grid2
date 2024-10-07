@@ -1,0 +1,125 @@
+/*
+    FLEX
+*/
+
+/*.container{
+    padding: 20px;
+    background-color: lightskyblue;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    max-width: 1200px;
+    margin: 0px auto;
+    text-align: center;
+}
+
+header, footer{
+    padding: 40px;
+    background-color: seagreen;
+}
+
+.navigation{
+    padding: 40px;
+    background-color: lightgreen;
+}
+
+.inner-container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    padding: 40px;
+    margin: auto;
+}
+
+.inner-container div, .inner-container section{
+    padding: 100px 250px;
+    background-color: lightgreen;
+}
+
+aside{
+    padding: 150px 15%;
+    background-color: aquamarine;
+}
+
+.inner-container div{
+    margin: auto;
+}
+
+.main-content{
+    display: flex;
+    background-color: seagreen;
+}*/
+
+/*
+    GRID
+*/
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "navigation"
+        "main"
+        "footer";
+    grid-gap: 30px;
+    padding: 20px;
+    background-color: lightskyblue;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header {
+    grid-area: header;
+    padding: 40px;
+    background-color: seagreen;
+}
+
+.navigation {
+    grid-area: navigation;
+    padding: 40px;
+    background-color: lightgreen;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+        "aside content";
+    background-color: seagreen;
+    grid-area: main;
+}
+
+aside {
+    grid-area: aside;
+    padding: 150px 15%;
+    background-color: aquamarine;
+}
+
+.inner-container {
+    display: grid;
+    grid-template-areas:
+        "content"
+        "section";
+    row-gap: 30px;
+    padding: 40px;
+    margin: auto;
+}
+
+.inner-container .content {
+    grid-area: content;
+    padding: 100px 250px;
+    background-color: lightgreen;
+}
+
+.inner-container section {
+    grid-area: section;
+    padding: 100px 250px;
+    background-color: lightgreen;
+}
+
+footer {
+    grid-area: footer;
+    padding: 40px;
+    background-color: seagreen;
+}
